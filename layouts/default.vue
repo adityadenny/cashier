@@ -1,8 +1,7 @@
 <template>
   <v-app dark>
     <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
+      v-model="sideDrawer"
       :clipped="clipped"
       fixed
       app
@@ -25,10 +24,8 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
+      <v-app-bar-nav-icon @click.stop="sideDrawer = !sideDrawer" />
+      
       <v-btn icon @click.stop="clipped = !clipped">
         <v-icon>mdi-application</v-icon>
       </v-btn>
@@ -68,7 +65,7 @@ export default {
   data() {
     return {
       clipped: false,
-      drawer: false,
+      sideDrawer: false,
       fixed: false,
       items: [
         {
@@ -82,7 +79,6 @@ export default {
           to: '/inspire',
         },
       ],
-      miniVariant: false,
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js',
