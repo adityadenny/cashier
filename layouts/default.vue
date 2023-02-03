@@ -24,10 +24,7 @@
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="sideDrawer = !sideDrawer" />
-      
-      
       <v-toolbar-title>{{ title }}</v-toolbar-title>
-      
     </v-app-bar>
     <v-main>
       <v-container>
@@ -62,7 +59,7 @@ export default {
         },
       ],
       right: true,
-      title: 'CASHIER APP',
+      title: 'Cashier',
     }
   },
 }
