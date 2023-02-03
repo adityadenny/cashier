@@ -2,8 +2,6 @@
   <v-app dark>
     <v-navigation-drawer
       v-model="sideDrawer"
-      :clipped="clipped"
-      fixed
       app
     >
       <v-list>
@@ -26,12 +24,7 @@
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="sideDrawer = !sideDrawer" />
       
-      <v-btn icon @click.stop="clipped = !clipped">
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
+      
       <v-toolbar-title>{{ title }}</v-toolbar-title>
       <v-spacer />
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
@@ -53,9 +46,6 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-footer :absolute="!fixed" app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
   </v-app>
 </template>
 
@@ -64,7 +54,6 @@ export default {
   name: 'DefaultLayout',
   data() {
     return {
-      clipped: false,
       sideDrawer: false,
       fixed: false,
       items: [
