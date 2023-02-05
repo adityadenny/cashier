@@ -7,7 +7,7 @@
     >
       <v-list>
         <v-list-item
-          v-for="(item, i) in items"
+          v-for="(item, i) in sideMenu"
           :key="i"
           :to="item.to"
           router
@@ -36,10 +36,12 @@
       height="10vh"
       fixed
       color="primary"
+      app
     >
-      <v-app-bar-nav-icon @click.stop="sideDrawer = !sideDrawer" 
-      v-ripple="false"
-      plain
+      <v-app-bar-nav-icon 
+        @click.stop="sideDrawer = !sideDrawer" 
+        v-ripple="false"
+        plain
       />
       <v-btn v-for="(item, i) in bottomMenu"
             :key="i"
@@ -62,12 +64,7 @@ export default {
     return {
       sideDrawer: false,
       fixed: false,
-      items: [
-        {
-          icon: 'mdi-application',
-          title: 'App',
-          to: '/',
-        },
+      sideMenu: [
         {
           icon: 'mdi-account',
           title: 'Account',
@@ -84,17 +81,7 @@ export default {
           icon: 'mdi-application',
           title: 'App',
           to: '/',
-        },
-        {
-          icon: 'mdi-account',
-          title: 'Account',
-          to: '/account',
-        },
-        {
-          icon: 'mdi-bell',
-          title: 'Notification',
-          to: '/notification',
-        },
+        }
       ],
 
       right: true,
