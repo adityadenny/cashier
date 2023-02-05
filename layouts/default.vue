@@ -37,10 +37,15 @@
       fixed
       color="primary"
     >
-      <v-app-bar-nav-icon @click.stop="sideDrawer = !sideDrawer" />
+      <v-app-bar-nav-icon @click.stop="sideDrawer = !sideDrawer" 
+      v-ripple="false"
+      plain
+      />
       <v-btn v-for="(item, i) in bottomMenu"
             :key="i"
-            :to="item.to">
+            :to="item.to"
+            v-ripple="false"
+            plain>
       <span>{{ item.title }}</span>
       <v-icon>{{ item.icon }}</v-icon>
        </v-btn>
