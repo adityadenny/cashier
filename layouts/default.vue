@@ -32,7 +32,10 @@
       </v-container>
     </v-main>
 
-    <v-bottom-navigation>
+    <v-bottom-navigation
+      horizontal
+      height="10vh"
+    >
       <v-app-bar-nav-icon>
         <v-btn v-for="(item, i) in bottomMenu"
         :key="i"
@@ -70,6 +73,24 @@ export default {
           to: '/notification',
         },
       ],
+      bottomMenu: [
+      {
+          icon: 'mdi-application',
+          title: 'App',
+          to: '/',
+        },
+        {
+          icon: 'mdi-account',
+          title: 'Account',
+          to: '/account',
+        },
+        {
+          icon: 'mdi-bell',
+          title: 'Notification',
+          to: '/notification',
+        },
+      ],
+
       right: true,
       title: 'Cashier',
     }
