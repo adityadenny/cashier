@@ -46,10 +46,10 @@
             :to="item.to"
             v-ripple="false"
             plain>
-      <span>{{ item.title }}</span>
-      <v-icon>{{ item.icon }}</v-icon>
-       </v-btn>
-      
+        <span>{{ item.title }}</span>
+        <v-icon>{{ item.icon }}</v-icon>
+      </v-btn>
+      <v-spacer />
     </v-bottom-navigation>
 
   </v-app>
