@@ -31,6 +31,18 @@
         <Nuxt />
       </v-container>
     </v-main>
+
+    <v-bottom-navigation>
+      <v-app-bar-nav-icon>
+        <v-btn v-for="(item, i) in bottomMenu"
+        :key="i"
+        :to="item.to">
+      <span>{{ item.title }}</span>
+        <v-icon>{{ item.icon }}</v-icon>
+        </v-btn>
+      </v-app-bar-nav-icon>
+    </v-bottom-navigation>
+
   </v-app>
 </template>
 
