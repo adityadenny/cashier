@@ -3,7 +3,7 @@
     <v-navigation-drawer
       v-model="sideDrawer"
       fixed
-      app
+      app 
     >
       <v-list>
         <v-list-item
@@ -22,9 +22,14 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar :clipped-left="clipped" fixed app>
+    <v-app-bar 
+      :clipped-left="clipped" 
+      fixed 
+      app      
+    >
       <v-toolbar-title>{{ title }}</v-toolbar-title>
     </v-app-bar>
+    
     <v-main>
       <v-container>
         <Nuxt />
