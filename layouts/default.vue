@@ -35,6 +35,7 @@
     <v-bottom-navigation
       horizontal
       height="10vh"
+      fixed
     >
       <v-app-bar-nav-icon>
         <v-btn v-for="(item, i) in bottomMenu"
