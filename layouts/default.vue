@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-navigation-drawer
       v-model="sideDrawer"
       fixed
@@ -23,7 +23,6 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
-      <v-app-bar-nav-icon @click.stop="sideDrawer = !sideDrawer" />
       <v-toolbar-title>{{ title }}</v-toolbar-title>
     </v-app-bar>
     <v-main>
@@ -36,15 +35,16 @@
       horizontal
       height="10vh"
       fixed
+      color="primary"
     >
-      <v-app-bar-nav-icon>
-        <v-btn v-for="(item, i) in bottomMenu"
-        :key="i"
-        :to="item.to">
+      <v-app-bar-nav-icon @click.stop="sideDrawer = !sideDrawer" />
+      <v-btn v-for="(item, i) in bottomMenu"
+            :key="i"
+            :to="item.to">
       <span>{{ item.title }}</span>
-        <v-icon>{{ item.icon }}</v-icon>
-        </v-btn>
-      </v-app-bar-nav-icon>
+      <v-icon>{{ item.icon }}</v-icon>
+       </v-btn>
+      
     </v-bottom-navigation>
 
   </v-app>
