@@ -81,9 +81,6 @@ export default {
           to: '/',
         }
       ],
-
-      right: true,
-      title: 'Cashier',
     }
   },
 }
